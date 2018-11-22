@@ -33,8 +33,10 @@ AWS_INSTANCETYPE_LARGE=The instance type when the user uses the 'high performanc
 The docker image automatically exposes port 3000.
 
 ```bash
-
+docker pull florisporro/ec2-control-panel
 ```
+
+Make sure to set the above environment variables and forward port 3000 to a port of your choosing.
 
 ### Building
 
