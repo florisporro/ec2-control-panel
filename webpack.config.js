@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './client/src/main.js',
+  entry: ['./client/src/main.js', 'webpack-hot-middleware/client'],
   output: {
     path: path.resolve(__dirname, './client/dist'),
     publicPath: '/dist/',
@@ -69,5 +69,9 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
+  ])
+} else if (process.env.NODE_ENV === 'development'){
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.HotModuleReplacementPlugin()
   ])
 }

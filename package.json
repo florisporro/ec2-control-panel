@@ -1,6 +1,6 @@
 {
-  "name": "node-vue-express-boilerplate",
-  "description": "NodeJS + Express + Vue.js + Webpack + LowDB + Docker boilerplate",
+  "name": "ec2-instance-control-panel",
+  "description": "Simple Amazon EC2 instance control panel, to shutdown, reboot, startup or change the instance type. Docker build available.",
   "version": "1.0.0",
   "author": "Floris Porro <floris@streammyevent.com>",
   "scripts": {
@@ -15,8 +15,13 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/vue-fontawesome": "^0.1.2",
+    "aws-sdk": "^2.360.0",
     "bootstrap": "^4.1.1",
     "chalk": "^2.4.1",
+    "dotenv": "^6.1.0",
     "express": "^4.15.3",
     "lowdb": "^1.0.0",
     "moment": "^2.22.2",

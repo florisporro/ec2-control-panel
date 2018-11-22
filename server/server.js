@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require('path');
 const settings = require('./settings');
 
@@ -27,7 +29,5 @@ if (process.env.NODE_ENV === 'development') {
 // Setup logger
 const logging = require('./lib/logging');
 logging.log("Server started", "success");
-
-logging.log(`The secret is: ${process.env.SECRET}`, "info");
 
 require("./app");
