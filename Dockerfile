@@ -16,13 +16,13 @@ COPY . .
 # Expose API port to the outside
 EXPOSE 3000
 
-ENV TOOLNAME="Amazon EC2 Instance Controller"
-ENV INSTANCENAME="Amazon EC2 Instance"
-ENV AWS_REGION="eu-central-1"
-ENV AWS_INSTANCE_ID=""
-ENV AWS_ACCESS_KEY_ID=""
-ENV AWS_SECRET_ACCESS_KEY=""
-ENV AWS_INSTANCETYPE_SMALL="t3.nano"
-ENV AWS_INSTANCETYPE_LARGE="t3.2xlarge"
+ENV TOOLNAME="Amazon EC2 Instance Controller" \
+    INSTANCENAME="Amazon EC2 Instance" \
+    AWS_REGION="eu-central-1" \
+    AWS_INSTANCE_ID="" \
+    AWS_ACCESS_KEY_ID="" \
+    AWS_SECRET_ACCESS_KEY="" \
+    AWS_INSTANCETYPE_SMALL="t3.nano" \
+    AWS_INSTANCETYPE_LARGE="t3.2xlarge"
 
 CMD [ "npm", "start" ]
